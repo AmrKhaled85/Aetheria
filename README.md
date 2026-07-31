@@ -1,139 +1,32 @@
-# Aetheria ✈️
+# React + TypeScript + Vite
 
-Aetheria is a premium luxury travel web application that showcases exclusive destinations and personalized travel experiences through a modern, elegant, and fully responsive interface.
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
----
+Currently, two official plugins are available:
 
-## ✨ Features
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-- Premium and modern UI
-- Fully responsive design
-- Cinematic hero section
-- Luxury destination showcase
-- Interactive itinerary builder
-- Private villas & charter experiences
-- Exclusive membership section
-- Testimonials and travel journal
-- Booking & concierge modals
-- Wishlist functionality
-- Smooth animations with Framer Motion
+## React Compiler
 
----
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## 🛠 Tech Stack
+## Expanding the Oxlint configuration
 
-- React 19
-- Vite
-- TypeScript
-- Tailwind CSS
-- Framer Motion
-- React Router DOM
-- Swiper.js
-- Lucide React
-- React Icons
+If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
 
----
-
-## 📂 Project Structure
-
-```text
-src/
-├── assets/
-├── components/
-├── sections/
-├── pages/
-├── hooks/
-├── context/
-├── data/
-├── types/
-├── utils/
-├── constants/
-└── styles/
+```json
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["react", "typescript", "oxc"],
+  "options": {
+    "typeAware": true
+  },
+  "rules": {
+    "react/rules-of-hooks": "error",
+    "react/only-export-components": ["warn", { "allowConstantExport": true }]
+  }
+}
 ```
 
----
-
-## 📱 Responsive Design
-
-Optimized for:
-
-- Desktop
-- Laptop
-- Tablet
-- Mobile
-
----
-
-## 🚀 Getting Started
-
-Clone the repository:
-
-```bash
-git clone https://github.com/yourusername/aetheria.git
-```
-
-Navigate to the project:
-
-```bash
-cd aetheria
-```
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Start the development server:
-
-```bash
-npm run dev
-```
-
----
-
-## 📦 Production Build
-
-```bash
-npm run build
-```
-
----
-
-## 🌟 Main Sections
-
-- Hero
-- Destination Showcase
-- Itinerary Builder
-- Luxury Experiences
-- Membership
-- Testimonials
-- Travel Journal
-- Footer
-
----
-
-## 🔮 Future Enhancements
-
-- User Authentication
-- Online Booking System
-- Payment Integration
-- Interactive Maps
-- Search & Filters
-- Multi-language Support
-- Dark Mode
-- Backend Integration
-
----
-
-## 📄 License
-
-This project is created for educational and portfolio purposes.
-
----
-
-## 👨‍💻 Author
-
-**Amr Khaled**
-
-Frontend Developer
+See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
